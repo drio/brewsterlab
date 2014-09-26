@@ -1,0 +1,33 @@
+#!./virt_env/bin/python
+# vim: set ts=4 ft=python:
+#
+import sys
+import shutil
+from jinja2 import Environment, PackageLoader
+from jinja2 import FileSystemLoader
+
+def log(msg):
+    sys.stdout.write(">> " + msg + "\n")
+
+env = Environment()
+env.loader = FileSystemLoader('./templates')
+
+shutil.rmtree("site")
+shutil.copytree("public", "site")
+
+def build_page(name, out_file=None):
+	if not out_file:
+		out_file = 'site/%s.html' % name
+	log("Building %s." % out_file)
+
+	tmpl = env.get_template('default.html')
+	cont = open('templates/%s.html' % name).read()
+	with open(out_file, 'w') as _f:
+		_f.write(tmpl.render(content=cont))
+
+build_page("contact")
+build_page("people")
+build_page("publications")
+build_page("home", "site/index.html")
+
+log("Build completed")
