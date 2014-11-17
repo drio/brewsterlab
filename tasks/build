@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#
+# -*- coding: utf-8 -*-
 # vim: set ts=4 sw=4 et ft=python:
 #
 import sys
@@ -11,14 +11,11 @@ import markdown2
 from jinja2 import Environment, PackageLoader
 from jinja2 import FileSystemLoader
 
+def uni(l):
+    return unicode(l.strip(), "utf8")
+
 def log(msg):
     sys.stdout.write(">> " + msg + "\n")
-
-env = Environment()
-env.loader = FileSystemLoader('./templates')
-
-shutil.rmtree("site")
-shutil.copytree("public", "site")
 
 def build_page(name, out_file=None, cont=None):
     if not out_file:
@@ -30,7 +27,8 @@ def build_page(name, out_file=None, cont=None):
         cont = open('templates/%s.html' % name).read()
 
     with open(out_file, 'w') as _f:
-        _f.write(tmpl.render(content=cont))
+        i_tmp = tmpl.render(content=cont).encode('utf-8')
+        _f.write(i_tmp)
 
 def build_people():
     people = "" 
@@ -45,14 +43,52 @@ def build_people():
         img_fn = img_fn.replace("public/", "")
   
         tmpl = env.get_template('person.html')
-        cont = {'name': html.metadata['name'], 'img_fn': img_fn, 'bio': str(html)}
+        cont = {'name': html.metadata['name'], 
+                'img_fn': img_fn, 
+                'bio': html}
         people = people + "\n" + (tmpl.render(cont))
 
     return people
-    
+
+def build_publications():
+    content = u""
+    order = [ 'authors' , 'year', 'title', 'journal', 'volume', 'pages' ]
+    d_pub = {}
+    idx = 0
+    n_pubs = 0
+    stream = open('publications.txt')
+
+    while True:
+        l = stream.readline()
+
+        if not l or not l.strip():
+            if idx != 6:
+                msg = "Incorrect publication entry in publications.txt (%d: pub num:%d)" % (idx, n_pubs)
+                raise Exception(msg)
+            idx = 0
+            n_pubs += 1
+            tmpl = env.get_template('single_pub.html')
+            content = content + "\n" + tmpl.render(d_pub)
+            # print ">> ------------------"
+            if not l:
+                break
+            continue
+
+        # print ">>", l,
+        d_pub[order[idx]] = uni(l)
+        idx += 1
+
+    log("# of pubs loaded: %d" % n_pubs)
+    return content
+
+env = Environment()
+env.loader = FileSystemLoader('./templates')
+
+shutil.rmtree("site")
+shutil.copytree("public", "site")
 
 build_page("home", out_file="site/index.html")
 build_page("people", cont=build_people())
-build_page("publications")
+build_page("publications", cont=build_publications())
 
 log("Build completed")
