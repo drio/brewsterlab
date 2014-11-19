@@ -1,0 +1,41 @@
+/* vim: set ts=2 sw=2 et */
+
+body {
+  font-family: "Open sans", "sans-serif", Helvetica, sans-serif;
+  margin: 30px auto;
+  width: 800px;
+}
+
+header {
+  padding-bottom: 40px;
+}
+
+#title {
+  width: auto;
+  font-size: 35px;
+  border-bottom: solid 2px black;
+}
+
+.navigation {
+  padding-top: 5px;
+  width: 250px;
+  font-size: 15px;
+/*  line-height: 90px;*/
+}
+
+.navigation a {
+  text-decoration: none;
+}
+
+.navigation a:hover {
+  color: black;
+  font-weight: bold;
+}
+
+a.center_link {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+
