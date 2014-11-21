@@ -1,4 +1,4 @@
-/* vim: set ts=2 sw=2 et */
+/* vim: set ts=2 sw=2 et: */
 
 body {
   font-family: "Open sans", "sans-serif", Helvetica, sans-serif;
@@ -8,6 +8,17 @@ body {
 
 header {
   padding-bottom: 40px;
+}
+
+footer {
+  width: auto;
+  padding-top: 40px;
+  text-align: right;
+  font-size: 10px;
+}
+
+#content {
+  float: none; 
 }
 
 #title {
@@ -37,5 +48,40 @@ a.center_link {
   padding-right: 10px;
 }
 
+#amy-image {
+  /*width: 230px;*/
+  /*background: red;*/
+  overflow: hidden;
+  float: left;
+  border-radius: 10px;
+}
 
+#contact, #research {
+  /*background:yellow;*/
+  overflow:hidden;
+  padding-left: 40px;
+}
 
+#research {
+  text-align: justify; 
+  padding-bottom: 20px;
+}
+
+#contact {
+  text-align: right;
+  padding-top: 10px;
+  font-size: 15px;
+}
+
+p {
+  margin-top: 2px;
+}
+
+#address p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#address {
+  padding-bottom: 14px;
+}
