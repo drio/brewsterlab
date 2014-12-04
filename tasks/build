@@ -8,6 +8,7 @@ import shutil
 import glob
 import os
 import time
+import codecs
 
 import markdown2
 from jinja2 import Environment, PackageLoader
@@ -26,6 +27,9 @@ def build_page(name, out_file=None, cont=None):
     log("Building %s." % out_file)
 
     tmpl = env.get_template('default.html')
+    if not cont:
+        cont = codecs.open('templates/%s.html' % name, 'r', encoding='utf-8').read()
+
     with open(out_file, 'w') as _f:
         i_tmp = tmpl.render(content=cont).encode('utf-8')
         _f.write(i_tmp)
@@ -123,6 +127,7 @@ if __name__ == "__main__":
     shutil.copytree("public", "site")
 
     build_page("home", out_file="site/index.html", cont=build_home())
+    build_page("teaching")
     build_page("people", cont=build_people())
     build_page("publications", cont=build_publications())
     log("Build completed")
