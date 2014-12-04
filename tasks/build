@@ -1,11 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# vim: set ts=4 sw=4 et ft=python:
-#
+# vim: set ts=4 sw=4 et ft=python foldmethod=indent:
+# zR/zM open close all folds
+# za
 import sys
 import shutil
 import glob
 import os
+import time
 
 import markdown2
 from jinja2 import Environment, PackageLoader
@@ -17,18 +19,40 @@ def uni(l):
 def log(msg):
     sys.stdout.write(">> " + msg + "\n")
 
+
 def build_page(name, out_file=None, cont=None):
     if not out_file:
         out_file = 'site/%s.html' % name
     log("Building %s." % out_file)
 
     tmpl = env.get_template('default.html')
-    if not cont:
-        cont = open('templates/%s.html' % name).read()
-
     with open(out_file, 'w') as _f:
         i_tmp = tmpl.render(content=cont).encode('utf-8')
         _f.write(i_tmp)
+
+
+def build_home():
+    news = []
+    for p in glob.glob("public/news/*.markdown"):
+        html = markdown2.markdown(open(p).read(), extras=["metadata"])
+        m = html.metadata
+        cont = {'title': m['title'],
+                'date' : m['date'],
+                'body': html}
+        tmpl = env.get_template('news.html')
+        d, t = m['date'], m['time']
+        t = time.strptime(d + "T" + t, "%m/%d/%YT%H:%M")
+        news.append((t ,(tmpl.render(cont)))) 
+
+    news.sort(reverse=True)
+    news_html = "" 
+    for n in news:
+        news_html += n[1]
+    tmpl = env.get_template('home.html')
+    home_html = tmpl.render({'news': news_html})
+
+    return home_html
+
 
 def build_people():
     people = "" 
@@ -49,6 +73,7 @@ def build_people():
         people = people + "\n" + (tmpl.render(cont))
 
     return people
+
 
 def build_publications():
     content = u""
@@ -81,14 +106,23 @@ def build_publications():
     log("# of pubs loaded: %d" % n_pubs)
     return content
 
-env = Environment()
-env.loader = FileSystemLoader('./templates')
 
-shutil.rmtree("site")
-shutil.copytree("public", "site")
+def set_work_dir():
+    _ = os.path.dirname(os.path.realpath(__file__)) + "/../."
+    prj_dir = os.path.normpath(_)
+    os.chdir(prj_dir)
+    print prj_dir
 
-build_page("home", out_file="site/index.html")
-build_page("people", cont=build_people())
-build_page("publications", cont=build_publications())
 
-log("Build completed")
+if __name__ == "__main__":
+    set_work_dir()
+    env = Environment()
+    env.loader = FileSystemLoader('./templates')
+
+    shutil.rmtree("site")
+    shutil.copytree("public", "site")
+
+    build_page("home", out_file="site/index.html", cont=build_home())
+    build_page("people", cont=build_people())
+    build_page("publications", cont=build_publications())
+    log("Build completed")

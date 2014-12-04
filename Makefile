@@ -8,5 +8,11 @@ virt_env:
 	@echo '---'
 	@echo '--> $ source virt_env/bin/activate'
 
+apu:
+	tasks/build
+	rsync -avz site/* apu:public_html/brewsterlab/
+
 watch:
 	filewatcher "templates/*.html public/css/* public/imgs/* tasks/*"  tasks/build
+
+.PHONY: watch apu virt_env
