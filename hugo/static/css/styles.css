@@ -1,0 +1,217 @@
+* {
+  outline: 0px solid red;
+}
+
+html {
+  width: 100%;
+  min-width: 800px;
+}
+
+body {
+  font: 16px/1.5em "Helvetica Neue", Helvetica, sans-serif;
+  background: white;
+  width: 100%;
+  margin: 0;
+}
+
+.container-menu {
+  width: 100%;
+  background-color: black;
+}
+
+.menu {
+  color: #B1946C;
+  background-color: black;
+  height: 70px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 30px;
+  width: 40%;
+  padding-top: 10px;
+  vertical-align: middle;
+}
+
+.links {
+  font-size: 14px;
+  width: 80%;
+  padding-top: 4px;
+}
+
+.links a {
+  padding-right: 10px;
+  color: #B1946C;
+  text-decoration: none;
+}
+
+.links a:hover {
+  font-weight: bold;
+}
+
+.index-image {
+  height: 400px;
+  background-image: url('/img/library-sweeden.png');
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-position: center 20%;
+  border-bottom: 2px solid #ddd;
+}
+
+.logo-container {
+  height: 100%;
+  padding-top: 380px;
+  padding-left: 85%;
+}
+
+.logo-container img {
+  position: absolute;
+  width: 85px;
+  height: auto;
+}
+
+.container-second-section {
+  font-size: 14px;
+  display: flex;
+  height: 300px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container-research, .container-contact {
+  outline: 0px solid red;
+  padding-top: 25px;
+  width: 75%;
+  min-width: 400px;
+}
+
+.container-research {
+  border-right: 1px solid #B1946C;
+  padding-right: 20px;
+}
+
+.container-contact {
+  padding-left: 30px;
+}
+
+.research-title, .contact-title {
+  padding-bottom: 10px;
+  color: #B1946C;
+  font-weight: bold;
+}
+
+.contact-entry {
+  display: block;
+  padding: 5px;
+}
+
+.page-footer {
+  width: 90%;
+}
+
+.page-footer {
+  width: 85%;
+}
+
+.copyright {
+  outline: 0px solid red;
+  font-size: 10px;
+  float: right;
+}
+
+.containers_members_one {
+  width: 100%;
+}
+
+.containers_members_two {
+  width: 100%;
+}
+
+.member_entry {
+  outline: 0px solid red;
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  align-items: center;
+}
+
+.member_image {
+  outline: 0px solid red;
+  display: flex;
+  padding: 10px;
+}
+
+.member_bio {
+  width: 55%;
+  outline: 0px solid red;
+  padding: 20px;
+  padding-left: 50px;
+}
+
+
+.class-section {
+  outline: 0px solid red;
+  width: 75%;
+  margin: 0 auto;
+  padding: 20px;
+  align-items: center;
+  border-left: 2px solid #B1946C;
+}
+
+.class-header {
+  outline: 0px solid red;
+  padding-top: 10px;
+}
+
+.class-id {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.class-name {
+  font-size: 25px;
+  font-weight: medium;
+}
+
+.class-description {
+  outline: 0px solid red;
+  padding-top: 10px;
+}
+
+.class-separator {
+  height: 25px;
+}
+
+.pub-section {
+  border-left: 2px solid #B1946C;
+  width: 75%;
+  margin: 0 auto;
+  padding: 20px;
+  align-items: center;
+}
+
+.pub-separator {
+  height: 25px;
+}
+
+.pub-year {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.pub-title {
+  padding-top: 10px;
+  font-size: 20px;
+  font-weight: medium;
+  /*color: #B1946C;*/
+}
+
+.pub-authors, .pub-journal {
+  padding-top: 5px;
+  font-size: 15px;
+  font-weight: medium;
+}

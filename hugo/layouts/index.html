@@ -1,0 +1,36 @@
+{{ template "header.html" . }}
+
+<section class="index-image">
+  <div class="logo-container"><img src="/img/purdue-logo.svg" alt="purdue-logo"></div>
+</section>
+
+<section class="container-second-section">
+  <div class="container-research">
+    <div class="research-title">Research Interests</div>
+    <div class="research-text">
+      {{$.Site.Data.amyinfo.rinterests}}
+    </div>
+  </div>
+  <div class="container-contact">
+    <div class="contact-title">Contact</div>
+    <div class="contact-text">
+      <span class="contact-entry"> {{$.Site.Data.amyinfo.title }}</span>
+      <span class="contact-entry"> {{$.Site.Data.amyinfo.department }}</span>
+      <span class="contact-entry"> {{$.Site.Data.amyinfo.address }}  </span>
+      <span class="contact-entry"> {{$.Site.Data.amyinfo.building }} </span>
+      <span class="contact-entry"> ✉ {{$.Site.Data.amyinfo.email}} | ☎ {{$.Site.Data.amyinfo.phone}} </span>
+    </div>
+  </div>
+</section>
+
+
+<!--
+<hr>
+{{ range where .Data.Pages "Type" "members" }}
+  <p>{{ .Params.name }}
+  <p>{{ .Params.bio }}
+  <hr>
+{{ end }}
+-->
+
+{{ template "footer.html" . }}
