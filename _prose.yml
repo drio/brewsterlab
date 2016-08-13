@@ -1,0 +1,1 @@
+ignore: [ 'config.toml',  'layouts', 'old_python', 'wercker.yml', '_prose.yml' ]
