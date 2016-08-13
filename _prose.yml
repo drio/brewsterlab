@@ -1,1 +1,2 @@
-ignore: [ 'config.toml',  'layouts', 'old_python', 'wercker.yml', '_prose.yml' ]
+prose:
+  ignore: [ 'config.toml',  'layouts', 'old_python', 'wercker.yml', '_prose.yml' ]
