@@ -1,2 +1,2 @@
 prose:
-  ignore: [ 'config.toml',  'layouts', 'old_python', 'wercker.yml', '_prose.yml' ]
+  ignore: [ 'config.toml',  'layouts', 'old_python', 'wercker.yml', '_prose.yml', '.gitignore' ]
