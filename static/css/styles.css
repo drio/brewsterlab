@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-	width: 800px;
+	width: 900px;
 }
 
 .page-header {
@@ -24,18 +24,16 @@ body {
 }
 
 .title-links {
-	height: 50px;
   outline: 0px solid green;
 }
 
 .title {
-  font-size: 25px;
+  font-size: 20px;
   padding-top: 0px;
-  vertical-align: middle;
 }
 
 .purdue-logo {
-  height: 40px;
+  height: 35px;
 }
 
 .links {
@@ -44,7 +42,7 @@ body {
 }
 
 .links a {
-  padding-right: 10px;
+  padding-right: 5px;
   /*color: #B1946C;*/
   text-decoration: none;
 }
