@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-	width: 900px;
+	max-width: 900px;
 }
 
 .page-header {
@@ -43,8 +43,9 @@ body {
 
 .links a {
   padding-right: 5px;
-  /*color: #B1946C;*/
+  color: #B1946C;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .links a:hover {
@@ -57,7 +58,7 @@ body {
   background-size: cover;
   -webkit-background-size: cover;
   background-position: center 20%;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 0px solid #ddd;
 }
 
 .container-index {
@@ -80,20 +81,15 @@ body {
   padding: 2px;
 }
 
-/*
-.page-footer {
-  width: 90%;
-}
-
-.page-footer {
-  width: 85%;
-}
-
 .copyright {
+	padding-top: 15px;
   outline: 0px solid red;
-  font-size: 10px;
+  font-size: 12px;
   float: right;
 }
+
+/*
+
 
 .containers_members_one {
   width: 100%;
