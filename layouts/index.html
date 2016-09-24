@@ -2,25 +2,23 @@
 
 <div class="index-image"></div>
 
-<section class="container-second-section">
-  <div class="container-research">
-    <div class="research-title">Research Interests</div>
-    <div class="research-text">
-      {{$.Site.Data.amyinfo.rinterests}}
-    </div>
-  </div>
-  <div class="container-contact">
-    <div class="contact-title">Contact</div>
-    <div class="contact-text">
-      <span class="contact-entry"> {{$.Site.Data.amyinfo.title }}</span>
-      <span class="contact-entry"> {{$.Site.Data.amyinfo.department }}</span>
-      <span class="contact-entry"> {{$.Site.Data.amyinfo.address }}  </span>
-      <span class="contact-entry"> {{$.Site.Data.amyinfo.building }} </span>
-      <span class="contact-entry"> ✉ {{$.Site.Data.amyinfo.email}} | ☎ {{$.Site.Data.amyinfo.phone}} </span>
-    </div>
-  </div>
-</section>
+<div class="container container-index">
 
+	<div class="row research-title index-title">Research Interests</div>
+
+	<div class="row"> {{$.Site.Data.amyinfo.rinterests}} </div>
+
+	<div class="row contact-title index-title">Contact</div>
+
+	<div class="row contact-text">
+		<span class="contact-entry"> {{$.Site.Data.amyinfo.title }}</span>
+		<span class="contact-entry"> {{$.Site.Data.amyinfo.department }}</span>
+		<span class="contact-entry"> {{$.Site.Data.amyinfo.address }}  </span>
+		<span class="contact-entry"> {{$.Site.Data.amyinfo.building }} </span>
+		<span class="contact-entry"> ✉ {{$.Site.Data.amyinfo.email}} | ☎ {{$.Site.Data.amyinfo.phone}} </span>
+	</div>
+
+</div>
 
 <!--
 <hr>

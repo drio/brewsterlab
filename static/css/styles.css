@@ -3,15 +3,15 @@
 }
 
 html {
-  width: 100%;
-  min-width: 800px;
 }
 
 body {
   font: 16px/1.5em "Helvetica Neue", Helvetica, sans-serif;
   background: white;
-  width: 100%;
-  margin: 0;
+}
+
+.container {
+	width: 800px;
 }
 
 .page-header {
@@ -62,68 +62,27 @@ body {
   border-bottom: 2px solid #ddd;
 }
 
-
-
-
-/*
-.container-menu {
-  width: 100%;
-  background-color: black;
-}
-
-.menu {
-  color: #B1946C;
-  background-color: black;
-  height: 70px;
-  width: 80%;
-  margin: 0 auto;
-}
-
-
-.logo-container {
-  height: 100%;
-  padding-top: 280px;
-  padding-left: 85%;
-}
-
-
-.container-second-section {
-  font-size: 14px;
-  display: flex;
-  height: 300px;
-  padding-top: 30px;
-  padding-bottom: 10px;
-  width: 80%;
-  margin: 0 auto;
-}
-
-.container-research, .container-contact {
-  outline: 0px solid red;
-  padding-top: 25px;
-  width: 75%;
-  min-width: 400px;
-}
-
-.container-research {
-  border-right: 1px solid #B1946C;
-  padding-right: 20px;
-}
-
-.container-contact {
-  padding-left: 30px;
+.container-index {
+	padding-top: 10px;
 }
 
 .research-title, .contact-title {
   padding-bottom: 10px;
   color: #B1946C;
   font-weight: bold;
+	font-size: 20px;
+}
+
+.index-title {
+	padding-top: 20px;
 }
 
 .contact-entry {
   display: block;
-  padding: 5px;
+  padding: 2px;
 }
 
+/*
 .page-footer {
   width: 90%;
 }
