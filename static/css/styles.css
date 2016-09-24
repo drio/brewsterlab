@@ -14,6 +14,57 @@ body {
   margin: 0;
 }
 
+.page-header {
+ 	outline: 0px solid black;
+  padding-top: 5px;
+  padding-bottom: 0px;
+  margin: 10px 0 20px;
+  border-bottom: 0px solid #eee;
+}
+
+.title-links {
+	height: 50px;
+  outline: 0px solid green;
+}
+
+.title {
+  font-size: 25px;
+  padding-top: 0px;
+  vertical-align: middle;
+}
+
+.purdue-logo {
+  height: 40px;
+}
+
+.links {
+  font-size: 14px;
+  padding-top: 0px;
+}
+
+.links a {
+  padding-right: 10px;
+  /*color: #B1946C;*/
+  text-decoration: none;
+}
+
+.links a:hover {
+  font-weight: bold;
+}
+
+.index-image {
+  height: 300px;
+  background-image: url('/img/library-sweeden.png');
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-position: center 20%;
+  border-bottom: 2px solid #ddd;
+}
+
+
+
+
+/*
 .container-menu {
   width: 100%;
   background-color: black;
@@ -27,49 +78,13 @@ body {
   margin: 0 auto;
 }
 
-.title {
-  font-size: 30px;
-  width: 40%;
-  padding-top: 10px;
-  vertical-align: middle;
-}
-
-.links {
-  font-size: 14px;
-  width: 80%;
-  padding-top: 4px;
-}
-
-.links a {
-  padding-right: 10px;
-  color: #B1946C;
-  text-decoration: none;
-}
-
-.links a:hover {
-  font-weight: bold;
-}
-
-.index-image {
-  height: 400px;
-  background-image: url('/img/library-sweeden.png');
-  background-size: cover;
-  -webkit-background-size: cover;
-  background-position: center 20%;
-  border-bottom: 2px solid #ddd;
-}
 
 .logo-container {
   height: 100%;
-  padding-top: 380px;
+  padding-top: 280px;
   padding-left: 85%;
 }
 
-.logo-container img {
-  position: absolute;
-  width: 85px;
-  height: auto;
-}
 
 .container-second-section {
   font-size: 14px;
@@ -215,3 +230,7 @@ body {
   font-size: 15px;
   font-weight: medium;
 }
+
+*/
+
+
