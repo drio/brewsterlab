@@ -16,10 +16,11 @@ body {
 
 .page-header {
  	outline: 0px solid black;
-  padding-top: 5px;
+  padding-top: 10px;
   padding-bottom: 0px;
-  margin: 10px 0 20px;
-  border-bottom: 0px solid #eee;
+  margin: 0px 0 20px;
+	border-bottom: 0px;
+	margin-bottom: 5px;
 }
 
 .title-links {
