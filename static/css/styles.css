@@ -17,7 +17,7 @@ body {
 .page-header {
  	outline: 0px solid black;
   padding-top: 10px;
-  padding-bottom: 0px;
+  padding-bottom: 15px;
   margin: 0px 0 20px;
 	border-bottom: 0px;
 	margin-bottom: 5px;
@@ -73,7 +73,7 @@ body {
 }
 
 .index-title {
-	padding-top: 20px;
+	padding-top: 30px;
 }
 
 .contact-entry {
@@ -88,39 +88,25 @@ body {
   float: right;
 }
 
-/*
-
-
-.containers_members_one {
-  width: 100%;
+.member-entry {
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
-.containers_members_two {
-  width: 100%;
-}
-
-.member_entry {
-  outline: 0px solid red;
-  display: flex;
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
-  align-items: center;
-}
-
-.member_image {
+.member-image {
   outline: 0px solid red;
   display: flex;
   padding: 10px;
 }
 
-.member_bio {
-  width: 55%;
+.member-bio {
   outline: 0px solid red;
   padding: 20px;
   padding-left: 50px;
 }
 
+
+/*
 
 .class-section {
   outline: 0px solid red;
