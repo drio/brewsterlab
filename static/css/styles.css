@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  font: 16px/1.5em "Helvetica Neue", Helvetica, sans-serif;
+  font: 16px/1.5em "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
   background: white;
 }
 
@@ -128,8 +128,8 @@ body {
 
 .pub-section {
   margin: 0 auto;
-  padding: 20px;
-  align-items: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 .pub-year {
