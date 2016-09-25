@@ -11,5 +11,8 @@
   </head>
 
   <body lang="en">
+    {{ if .Site.Params.disable }}
+      <div class="dim"></div>
+    {{end}}
     <div class="container">
       {{ template "menu.html" . }}
