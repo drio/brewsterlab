@@ -5,4 +5,4 @@ disableRSS = true
 publishdir = "public"
 
 [params]
-	disable = true
+	disable = false
