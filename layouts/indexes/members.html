@@ -1,11 +1,7 @@
 {{ template "header.html" . }}
 
-{{ range $index, $element := .Data.Pages }}
-  {{ if modBool $index 2 }}
-	  {{ .Render "summary-first" }}
-  {{ else }}
-	  {{ .Render "summary-second" }}
-  {{ end }}
+{{ range .Data.Pages }}
+	{{ .Render "summary" }}
 {{ end }}
 
 {{ template "footer.html" . }}
