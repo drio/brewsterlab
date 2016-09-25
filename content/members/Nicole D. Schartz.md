@@ -1,3 +1,3 @@
 name: Nicole D. Schartz
-img: david-rio.png
+img: NDS.jpg
 bio: ' XXXXXXXXXXXXXX. '
