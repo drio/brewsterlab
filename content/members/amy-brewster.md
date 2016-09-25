@@ -1,6 +1,6 @@
 ---
 name: Amy Brewster
-img: xxamy-brewster.png
+img: amy-brewster.png
 bio: ' XXXXXX. '
 published: true
 ---

@@ -1,5 +1,7 @@
 <div class="row member-entry">
-  <div class="member-image col-md-3"><img src="/img/members/{{ .Params.img }}" alt="{{ .Params.name}}"></div>
+  <div class="member-image col-md-3">
+    <img src="/img/members/{{ .Params.img }}" class="img-responsive" alt="{{ .Params.name}}">
+  </div>
   <div class="member-bio col-md-8">
     {{ .Params.bio }}
   </div>

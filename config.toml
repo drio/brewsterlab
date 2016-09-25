@@ -2,5 +2,5 @@ baseurl = "http://brewsterlab.com/"
 languageCode = "en-us"
 title = "Brewster Lab"
 disableRSS = true
-#publishdir = "public"
-publishdir = "tmp"
+publishdir = "public"
+#publishdir = "tmp"
