@@ -7,3 +7,11 @@
 
   </body>
 </html>
+<script>
+document.onkeydown = function(evt) {
+	evt = evt || window.event;
+	if (evt.key == "S") {
+		document.getElementsByClassName("dim")[0].remove();
+	}
+};
+</script>
